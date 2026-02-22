@@ -30,7 +30,7 @@
     <header class="navbar">
         <div class="container">
             <a href="{% url 'pages:home' %}" class="logo">
-                <span class="logo-accent">Certi</span>bridge<span class="logo-light">Talent</span>
+                <img src="{% static 'img/logo.jpeg' %}" alt="Certibridge Talent Logo">
             </a>
             <nav class="nav-links" id="navLinks">
                 <a href="{% url 'pages:home' %}" class="nav-link">Home</a>
@@ -95,7 +95,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="logo">Certibridge Talent</span>
+                    <a href="{% url 'pages:home' %}" class="logo">
+                        <img src="{% static 'img/logo.jpeg' %}" alt="Certibridge Talent Logo"
+                            style="height: 40px; filter: grayscale(1) brightness(2);">
+                    </a>
                     <p>Building excellence through world-class certification and professional training. Proud PECB
                         Representative in Rwanda.</p>
                 </div>

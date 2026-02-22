@@ -313,7 +313,9 @@
     /* Hero Visual */
     .hero-visual-wrapper {
         position: relative;
-        height: 500px;
+        width: 100%;
+        aspect-ratio: 1;
+        max-height: 500px;
     }
 
     .glass-card {
@@ -460,7 +462,8 @@
         border-radius: 30px;
         overflow: hidden;
         box-shadow: var(--shadow-lg);
-        height: 400px;
+        width: 100%;
+        aspect-ratio: 21/9;
     }
 
     .journey-visual img {
@@ -594,8 +597,17 @@
         }
 
         .hero-visual-wrapper {
-            height: 350px;
+            aspect-ratio: 16/9;
+            height: auto;
+            max-height: 350px;
             margin-top: 4rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
+
+        .journey-visual {
+            aspect-ratio: 16/9;
         }
 
         .floating-item {

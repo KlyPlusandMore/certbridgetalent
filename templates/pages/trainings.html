@@ -1,0 +1,467 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Training & Certifications | Certibridge Talent{% endblock %}
+
+{% block content %}
+<section class="page-header reveal reveal-in">
+    <div class="container reveal reveal-up delay-1">
+        <h1>Professional <span class="accent">Training</span> & Certifications</h1>
+        <p>Global standards, local expertise. Become a certified professional with PECB and Certibridge Talent.</p>
+    </div>
+</section>
+
+<section class="section training-catalog reveal reveal-up">
+    <div class="container">
+        <div class="section-header reveal reveal-up">
+            <span class="sub-header">Exhaustive Certification Catalog</span>
+            <h2>Future-Proof Your Career in <span class="text-primary">2026</span></h2>
+            <p>Our training programs are meticulously designed to provide exhaustive knowledge and practical skills that
+                translate directly to professional success. Choose your path to excellence.</p>
+        </div>
+
+        <div class="catalog-filters">
+            <button class="filter-btn active">All Programs</button>
+            <button class="filter-btn">Information Security</button>
+            <button class="filter-btn">Quality & Risk</button>
+            <button class="filter-btn">Continuity & Resilience</button>
+        </div>
+
+        <div class="training-grid">
+            <!-- Information Security -->
+            <div class="training-card featured reveal reveal-up delay-1 hover-lift" data-category="security">
+                <div class="card-tag">High Demand</div>
+                <h3>ISO/IEC 27001 Lead Auditor</h3>
+                <p>Become a top-tier security expert. This exhaustive course empowers you to conduct professional ISMS
+                    audits, a skill that is globally recognized and highly compensated in Rwanda's growing tech sector.
+                </p>
+                <div class="benefits">
+                    <span>✓ Master ISMS Auditing</span>
+                    <span>✓ Career Advancement</span>
+                </div>
+                <div class="card-meta">
+                    <span>Duration: 5 Days</span>
+                    <span>Level: Expert</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-primary" style="width: 100%;">Apply for This
+                    Program</a>
+            </div>
+
+            <div class="training-card reveal reveal-up delay-2 hover-lift" data-category="security">
+                <div class="card-tag">Strategic</div>
+                <h3>ISO/IEC 27001 Lead Implementer</h3>
+                <p>Learn to design and deploy robust security frameworks. You'll gain exhaustive knowledge on protecting
+                    organizational assets and ensuring compliance with international standards.</p>
+                <div class="card-meta">
+                    <span>Duration: 5 Days</span>
+                    <span>Level: Expert</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Check
+                    Upcoming Dates &rarr;</a>
+            </div>
+
+            <!-- Quality Management -->
+            <div class="training-card reveal reveal-up delay-3 hover-lift" data-category="quality">
+                <div class="card-tag">Core Quality</div>
+                <h3>ISO 9001 Lead Auditor</h3>
+                <p>Drive organizational excellence. This certification provides an exhaustive deep-dive into quality
+                    management, enabling you to transform business processes for maximum efficiency.</p>
+                <div class="card-meta">
+                    <span>Duration: 5 Days</span>
+                    <span>Level: Expert</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline"
+                    style="width: 100%; margin-top: auto;">Express Interest &rarr;</a>
+            </div>
+
+            <!-- Risk Management -->
+            <div class="training-card reveal reveal-up delay-1 hover-lift" data-category="risk">
+                <div class="card-tag">Management</div>
+                <h3>ISO 31000 Risk Manager</h3>
+                <p>Equip yourself with the tools to identify, assess, and mitigate complex risks. An exhaustive program
+                    for leaders who want to ensure long-term corporate stability.</p>
+                <div class="card-meta">
+                    <span>Duration: 3 Days</span>
+                    <span>Level: Intermediate</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">More
+                    Information &rarr;</a>
+            </div>
+
+            <!-- Business Continuity -->
+            <div class="training-card reveal reveal-up delay-2 hover-lift" data-category="resilience">
+                <div class="card-tag">Resilience</div>
+                <h3>ISO 22301 Lead Implementer</h3>
+                <p>Prepare for the unexpected. Learn exhaustive business continuity strategies to keep organizations
+                    running smoothly during any crisis or disruption.</p>
+                <div class="card-meta">
+                    <span>Duration: 5 Days</span>
+                    <span>Level: Expert</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Apply
+                    Today &rarr;</a>
+            </div>
+
+            <!-- Cybersecurity -->
+            <div class="training-card reveal reveal-up delay-3 hover-lift" data-category="security">
+                <div class="card-tag">Elite Cyber</div>
+                <h3>Lead Cybersecurity Manager</h3>
+                <p>Join the frontlines of digital defense. This exhaustive course covers advanced cybersecurity program
+                    management, essential for modern IT leadership.</p>
+                <div class="card-meta">
+                    <span>Duration: 5 Days</span>
+                    <span>Level: Lead</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Apply
+                    Today &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Certify Section -->
+<section class="section why-certify light-bg reveal reveal-up">
+    <div class="container">
+        <div class="grid-2">
+            <div class="why-image reveal reveal-left">
+                <div class="image-stack">
+                    <img src="{% static 'img/A9719145.jpeg' %}" alt="PECB Certificate" class="top-img"
+                        style="width: 80%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <img src="{% static 'img/approved-training-istock.jpg' %}" alt="Training Session" class="bottom-img"
+                        style="width: 80%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: -50px; margin-left: 20%;">
+                </div>
+            </div>
+            <div class="why-text reveal reveal-right">
+                <h2>Why Get Certified with <span class="text-primary">Certibridge Talent</span>?</h2>
+                <div class="perks">
+                    <div class="perk">
+                        <h4>In-Depth Methodology</h4>
+                        <p>Our training is exhaustive, going beyond the textbook to provide real-world insights into ISO
+                            implementation and auditing.</p>
+                    </div>
+                    <div class="perk">
+                        <h4>Elite Networking</h4>
+                        <p>Join a community of certified professionals in Kigali. We foster connections that lead to
+                            career breakthroughs.</p>
+                    </div>
+                    <div class="perk">
+                        <h4>PECB Global Exam Access</h4>
+                        <p>Seamless access to PECB global examinations, ensuring your credentials carry the weight of
+                            international authority.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section training-cta reveal reveal-in">
+    <div class="container">
+        <div class="cta-inner reveal reveal-up delay-1">
+            <h2>Ready to Start Your Certification Journey?</h2>
+            <p>Join our next cohort in Kigali. We provide both physical and virtual training options tailored to your
+                schedule.</p>
+            <div class="cta-btns">
+                <a href="{% url 'pages:contact' %}" class="btn btn-secondary">Check Training Schedule</a>
+                <a href="tel:+250788123456" class="btn btn-outline"
+                    style="color: white !important; border-color: rgba(255,255,255,0.3);">Speak with an Advisor</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .page-header {
+        background: #0f172a;
+        color: white;
+        padding: 6rem 0;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .page-header .accent {
+        color: var(--primary-light);
+    }
+
+    .page-header p {
+        font-size: 1.25rem;
+        opacity: 0.8;
+    }
+
+    .training-catalog {
+        padding: 6rem 0;
+    }
+
+    .catalog-filters {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 4rem;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        border: 1px solid #e2e8f0;
+        background: white;
+        cursor: pointer;
+        font-weight: 500;
+        transition: var(--transition);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+    }
+
+    .training-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .training-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 20px;
+        border: 1px solid #e2e8f0;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .training-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        border-color: var(--primary-light);
+    }
+
+    .card-tag {
+        display: inline-block;
+        padding: 0.35rem 0.85rem;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--primary-light);
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        align-self: flex-start;
+    }
+
+    .training-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #0f172a;
+        line-height: 1.3;
+    }
+
+    .benefits {
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .benefits span {
+        font-size: 0.85rem;
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    .btn-primary-small {
+        background: var(--primary);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-align: center;
+        transition: var(--transition);
+        margin-top: auto;
+    }
+
+    .btn-primary-small:hover {
+        background: var(--primary-light);
+        transform: translateY(-2px);
+        color: white;
+    }
+
+    .training-card p {
+        color: var(--text-light);
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+
+    .card-meta {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+        border-top: 1px solid #f1f5f9;
+        margin-bottom: 1.5rem;
+        font-size: 0.85rem;
+        color: var(--text-main);
+        font-weight: 600;
+    }
+
+    .btn-text {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.95rem;
+        margin-top: auto;
+    }
+
+    .why-certify {
+        padding: 8rem 0;
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .why-image {
+        position: relative;
+    }
+
+    .image-stack {
+        height: 450px;
+        background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        text-align: center;
+        color: var(--primary);
+        font-weight: 700;
+        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.02);
+    }
+
+    .top-img,
+    .bottom-img {
+        padding: 1.5rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        margin: 1rem;
+        width: 80%;
+    }
+
+    .why-text h2 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        line-height: 1.2;
+    }
+
+    .perks {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .perk h4 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+        color: #0f172a;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+    .perk h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.5rem;
+        width: 4px;
+        height: 20px;
+        background: var(--secondary);
+        border-radius: 2px;
+    }
+
+    .perk p {
+        color: var(--text-light);
+        line-height: 1.8;
+        font-size: 1.05rem;
+    }
+
+    .training-cta {
+        padding: 4rem 0 8rem;
+    }
+
+    .cta-inner {
+        background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+        padding: 5rem;
+        border-radius: 30px;
+        color: white;
+        text-align: center;
+    }
+
+    .cta-inner h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-inner p {
+        font-size: 1.25rem;
+        opacity: 0.9;
+        margin-bottom: 3rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-btns {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .btn-outline-white {
+        border: 2px solid white;
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: var(--transition);
+    }
+
+    .btn-outline-white:hover {
+        background: white;
+        color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+        .page-header h1 {
+            font-size: 2.5rem;
+        }
+
+        .cta-inner {
+            padding: 3rem 2rem;
+        }
+
+        .cta-btns {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .training-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock %}

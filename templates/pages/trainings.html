@@ -25,6 +25,7 @@
             <button class="filter-btn">Information Security</button>
             <button class="filter-btn">Quality & Risk</button>
             <button class="filter-btn">Continuity & Resilience</button>
+            <button class="filter-btn">Technical & HSE</button>
         </div>
 
         <div class="training-grid">
@@ -114,6 +115,89 @@
                 </div>
                 <a href="{% url 'pages:contact' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Apply
                     Today &rarr;</a>
+            </div>
+
+            <!-- New Courses - Quality & Risk / HSE -->
+            <div class="training-card reveal reveal-up delay-1 hover-lift" data-category="quality">
+                <div class="card-tag">Health & Safety</div>
+                <h3>ISO 45001 Lead Auditor</h3>
+                <p>Master Occupational Health and Safety. This exhaustive training equips you to manage and audit OHSMS,
+                    ensuring a safe and healthy environment for employees.</p>
+                <div class="card-meta">
+                    <span>Duration: 5 Days</span>
+                    <span>Level: Expert</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline"
+                    style="width: 100%; margin-top: auto;">Register
+                    Now &rarr;</a>
+            </div>
+
+            <div class="training-card reveal reveal-up delay-2 hover-lift" data-category="quality">
+                <div class="card-tag">Environment</div>
+                <h3>ISO 14001 Lead Auditor</h3>
+                <p>Lead the way in environmental excellence. Learn how to manage and audit environmental impacts with
+                    this
+                    exhaustive international standard.</p>
+                <div class="card-meta">
+                    <span>Duration: 5 Days</span>
+                    <span>Level: Expert</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Join
+                    Cohort &rarr;</a>
+            </div>
+
+            <div class="training-card reveal reveal-up delay-3 hover-lift" data-category="quality">
+                <div class="card-tag">Food Safety</div>
+                <h3>ISO 22000 Lead Auditor</h3>
+                <p>Ensure food safety at every stage of the supply chain. An exhaustive deep-dive into Food Safety
+                    Management Systems (FSMS) for global compliance.</p>
+                <div class="card-meta">
+                    <span>Duration: 5 Days</span>
+                    <span>Level: Expert</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Learn
+                    More &rarr;</a>
+            </div>
+
+            <!-- New Technical HSE Category -->
+            <div class="training-card reveal reveal-up delay-1 hover-lift" data-category="Technical & HSE">
+                <div class="card-tag">Safety Ops</div>
+                <h3>Traveaux en hauteur</h3>
+                <p>Comprehensive training on working safely at heights. Master the essential techniques and equipment
+                    requirements for exhaustive safety compliance.</p>
+                <div class="card-meta">
+                    <span>Duration: 2 Days</span>
+                    <span>Level: Technical</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline"
+                    style="width: 100%; margin-top: auto;">Technical
+                    Training &rarr;</a>
+            </div>
+
+            <div class="training-card reveal reveal-up delay-2 hover-lift" data-category="Technical & HSE">
+                <div class="card-tag">Safety Ops</div>
+                <h3>Conduite Defensive</h3>
+                <p>Master defensive driving techniques. This exhaustive practical course reduces risks and ensures the
+                    highest standards of operational safety on the road.</p>
+                <div class="card-meta">
+                    <span>Duration: 3 Days</span>
+                    <span>Level: Operational</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Drive
+                    Safely &rarr;</a>
+            </div>
+
+            <div class="training-card reveal reveal-up delay-3 hover-lift" data-category="Technical & HSE">
+                <div class="card-tag">Safety Ops</div>
+                <h3>Espace Confiné</h3>
+                <p>Safety protocols for working in confined spaces. An exhaustive training on atmospheric monitoring,
+                    rescue procedures, and confined space management.</p>
+                <div class="card-meta">
+                    <span>Duration: 2 Days</span>
+                    <span>Level: Technical</span>
+                </div>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Stay
+                    Safe &rarr;</a>
             </div>
         </div>
     </div>
@@ -464,4 +548,39 @@
         }
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const trainingCards = document.querySelectorAll('.training-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.textContent.trim().toLowerCase();
+
+                trainingCards.forEach(card => {
+                    const category = card.getAttribute('data-category').toLowerCase();
+
+                    if (filter === 'all programs') {
+                        card.style.display = 'flex';
+                    } else if (filter === 'information security' && category === 'security') {
+                        card.style.display = 'flex';
+                    } else if (filter === 'quality & risk' && (category === 'quality' || category === 'risk')) {
+                        card.style.display = 'flex';
+                    } else if (filter === 'continuity & resilience' && category === 'resilience') {
+                        card.style.display = 'flex';
+                    } else if (filter === 'technical & hse' && category.includes('technical')) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
 {% endblock %}

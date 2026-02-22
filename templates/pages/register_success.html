@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Registration Successful | Certibridge Talent{% endblock %}
+
+{% block content %}
+<section class="section success-section reveal reveal-in">
+    <div class="container">
+        <div class="success-card glass-card text-center reveal reveal-up">
+            <div class="success-icon">✓</div>
+            <h2>Registration Successfully Received!</h2>
+            <p class="lead">Thank you for choosing Certibridge Talent. Your application for professional certification
+                is now being processed.</p>
+
+            <div class="next-steps-info">
+                <p>We have sent a confirmation details to your email. Our academic team in Gisozi, Kigali will contact
+                    you within **24 business hours** to finalize your enrollment.</p>
+            </div>
+
+            <div class="success-actions">
+                <a href="{% url 'pages:home' %}" class="btn btn-primary">Return to Home</a>
+                <a href="{% url 'pages:trainings' %}" class="btn btn-outline">Explore More Programs</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .success-section {
+        padding: 10rem 0;
+        background: #f8fafc;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .success-card {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 5rem;
+        background: white;
+        border-radius: 40px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+    }
+
+    .success-icon {
+        width: 100px;
+        height: 100px;
+        background: var(--accent);
+        color: white;
+        font-size: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 auto 2.5rem;
+        box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
+    }
+
+    .success-card h2 {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+        color: var(--text-light);
+        margin-bottom: 2.5rem;
+    }
+
+    .next-steps-info {
+        background: #f1f5f9;
+        padding: 2rem;
+        border-radius: 20px;
+        margin-bottom: 3rem;
+        line-height: 1.8;
+        color: var(--text-main);
+    }
+
+    .success-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .success-card {
+            padding: 3rem 1.5rem;
+        }
+
+        .success-actions {
+            flex-direction: column;
+        }
+    }
+</style>
+{% endblock %}

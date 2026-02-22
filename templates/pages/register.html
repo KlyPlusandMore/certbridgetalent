@@ -1,0 +1,271 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Course Registration | Certibridge Talent{% endblock %}
+
+{% block content %}
+<section class="page-header reveal reveal-in">
+    <div class="container reveal reveal-up delay-1">
+        <h1>Certification <span class="accent">Registration</span></h1>
+        <p>Take the first step towards your global professional certification.</p>
+    </div>
+</section>
+
+<section class="section registration-section reveal reveal-up">
+    <div class="container">
+        <div class="registration-container grid-2">
+            <div class="registration-form-wrapper reveal reveal-left">
+                <div class="form-card glass-card">
+                    <h3>Enrollment Form</h3>
+                    <p>Please provide your details and select the certification program you wish to enroll in.</p>
+
+                    <form method="post" class="main-form registration-form">
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            <label for="{{ form.full_name.id_for_label }}">Full Name</label>
+                            {{ form.full_name }}
+                            {% if form.full_name.errors %}
+                            <div class="form-error">{{ form.full_name.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="{{ form.email.id_for_label }}">Email Address</label>
+                                {{ form.email }}
+                                {% if form.email.errors %}
+                                <div class="form-error">{{ form.email.errors }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                <label for="{{ form.phone_number.id_for_label }}">Phone Number</label>
+                                {{ form.phone_number }}
+                                {% if form.phone_number.errors %}
+                                <div class="form-error">{{ form.phone_number.errors }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="{{ form.course.id_for_label }}">Certification Program</label>
+                                {{ form.course }}
+                                {% if form.course.errors %}
+                                <div class="form-error">{{ form.course.errors }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                <label for="{{ form.training_format.id_for_label }}">Preferred Format</label>
+                                {{ form.training_format }}
+                                {% if form.training_format.errors %}
+                                <div class="form-error">{{ form.training_format.errors }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.message.id_for_label }}">Additional Information</label>
+                            {{ form.message }}
+                            {% if form.message.errors %}
+                            <div class="form-error">{{ form.message.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <button type="submit" class="btn btn-secondary btn-glow" style="width: 100%; margin-top: 1rem;">
+                            Complete Registration &rarr;
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="registration-info reveal reveal-right">
+                <div class="info-block">
+                    <h4>Next Steps After Registration</h4>
+                    <ul class="steps-list">
+                        <li>
+                            <span class="step-num">01</span>
+                            <div>
+                                <h5>Review & Approval</h5>
+                                <p>Our academic advisors will review your application and certification choice within 24
+                                    hours.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">02</span>
+                            <div>
+                                <h5>Admission Confirmation</h5>
+                                <p>You will receive an email with the training schedule, curriculum details, and payment
+                                    options.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">03</span>
+                            <div>
+                                <h5>Welcome Cohort</h5>
+                                <p>Once confirmed, you'll be added to our next training cohort in Kigali or our virtual
+                                    classroom.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="support-card glass-card">
+                    <h5>Need Help?</h5>
+                    <p>If you're unsure which certification is right for your career path, speak with our advisors.</p>
+                    <a href="tel:+250788123456" class="text-link">+250 788 123 456</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .page-header {
+        background: #020617;
+        color: white;
+        padding: 6rem 0;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .page-header .accent {
+        color: var(--primary-light);
+    }
+
+    .registration-section {
+        padding: 6rem 0;
+    }
+
+    .form-card {
+        padding: 3.5rem;
+        background: white;
+        border-radius: 30px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-card h3 {
+        font-size: 1.75rem;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .form-card p {
+        color: var(--text-light);
+        margin-bottom: 2.5rem;
+    }
+
+    .registration-form .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .registration-form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        font-size: 0.85rem;
+        color: var(--text-main);
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        transition: var(--transition);
+        font-family: inherit;
+        background: #f8fafc;
+    }
+
+    .form-input:focus {
+        background: white;
+        border-color: var(--primary-light);
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .form-error {
+        color: #ef4444;
+        font-size: 0.8rem;
+        margin-top: 0.25rem;
+    }
+
+    .steps-list {
+        list-style: none;
+        margin-top: 2rem;
+    }
+
+    .steps-list li {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .step-num {
+        width: 40px;
+        height: 40px;
+        background: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        flex-shrink: 0;
+    }
+
+    .steps-list h5 {
+        font-size: 1.1rem;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .steps-list p {
+        font-size: 0.95rem;
+        color: var(--text-light);
+    }
+
+    .support-card {
+        margin-top: 3rem;
+        padding: 2.5rem;
+        text-align: center;
+        background: #f1f5f9;
+    }
+
+    .support-card h5 {
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+    }
+
+    .text-link {
+        font-weight: 700;
+        color: var(--secondary);
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        .form-card {
+            padding: 2rem;
+        }
+    }
+</style>
+{% endblock %}

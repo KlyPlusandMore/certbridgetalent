@@ -36,6 +36,7 @@
                 <a href="{% url 'pages:home' %}" class="nav-link">Home</a>
                 <a href="{% url 'pages:about' %}" class="nav-link">About Us</a>
                 <a href="{% url 'pages:trainings' %}" class="nav-link">Training</a>
+                <a href="{% url 'pages:register' %}" class="nav-link">Register</a>
                 <a href="{% url 'pages:contact' %}" class="btn btn-primary">Contact Us</a>
             </nav>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
@@ -107,8 +108,9 @@
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Certifications</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{% url 'pages:trainings' %}">Certifications</a></li>
+                        <li><a href="{% url 'pages:register' %}">Register Now</a></li>
+                        <li><a href="{% url 'pages:contact' %}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">

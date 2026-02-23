@@ -30,7 +30,7 @@ class RegisterView(View):
         form = RegistrationForm(initial=initial)
         return render(request, self.template_name, {'form': form})
 
-    def post(self, request):
+    def post(self, request, course_id=None):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             registration = form.save()

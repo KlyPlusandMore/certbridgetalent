@@ -6,19 +6,18 @@ django.setup()
 
 from pages.models import Course
 
+# Clear existing courses
+print("Clearing existing courses...")
+Course.objects.all().delete()
+
 courses = [
-    ('ISO/IEC 27001 Lead Auditor', 'security', 'Master Information Security Management System auditing.'),
-    ('ISO/IEC 27001 Lead Implementer', 'security', 'Learn to implement robust security frameworks.'),
-    ('ISO 9001 Lead Auditor', 'quality', 'Drive organizational excellence through quality management.'),
-    ('ISO 31000 Risk Manager', 'quality', 'Identify, assess, and mitigate complex organizational risks.'),
-    ('ISO 22301 Lead Implementer', 'resilience', 'Prepare exhaustive business continuity strategies.'),
-    ('Lead Cybersecurity Manager', 'security', 'Advanced management of cybersecurity programs.'),
-    ('ISO 45001 Lead Auditor', 'quality', 'Master Occupational Health and Safety Management Systems.'),
-    ('ISO 14001 Lead Auditor', 'quality', 'Lead organizations in environmental management excellence.'),
-    ('ISO 22000 Lead Auditor', 'quality', 'Ensure food safety standards across the supply chain.'),
-    ('Traveaux en hauteur', 'technical', 'Safety protocols and techniques for working at heights.'),
-    ('Conduite Defensive', 'technical', 'Practical defensive driving techniques for operational safety.'),
-    ('Espace Confiné', 'technical', 'Safety management for working in confined spaces.'),
+    ('ISO 45001', 'quality', 'Occupational Health and Safety Management Systems.'),
+    ('ISO 22000', 'quality', 'Food Safety Management Systems.'),
+    ('ISO 14001', 'quality', 'Environmental Management Systems.'),
+    ('Traveaux en hauteur', 'technical', 'Safety protocols for working at heights.'),
+    ('Conduite Defensive', 'technical', 'Defensive driving techniques for safety.'),
+    ('Espace Confine', 'technical', 'Safety management for confined spaces.'),
+    ('ISO 31000', 'quality', 'Risk Management guidelines and principles.'),
 ]
 
 for title, cat, desc in courses:

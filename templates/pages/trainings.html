@@ -22,102 +22,11 @@
 
         <div class="catalog-filters">
             <button class="filter-btn active">All Programs</button>
-            <button class="filter-btn">Information Security</button>
             <button class="filter-btn">Quality & Risk</button>
-            <button class="filter-btn">Continuity & Resilience</button>
             <button class="filter-btn">Technical & HSE</button>
         </div>
 
         <div class="training-grid">
-            <!-- Information Security -->
-            <div class="training-card featured reveal reveal-up delay-1 hover-lift" data-category="security">
-                <div class="card-tag">High Demand</div>
-                <h3>ISO/IEC 27001 Lead Auditor</h3>
-                <p>Become a top-tier security expert. This exhaustive course empowers you to conduct professional ISMS
-                    audits, a skill that is globally recognized and highly compensated in Rwanda's growing tech sector.
-                </p>
-                <div class="benefits">
-                    <span>✓ Master ISMS Auditing</span>
-                    <span>✓ Career Advancement</span>
-                </div>
-                <div class="card-meta">
-                    <span>Duration: 5 Days</span>
-                    <span>Level: Expert</span>
-                </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline"
-                    style="width: 100%; margin-top: auto;">Register Now &rarr;</a>
-            </div>
-
-            <div class="training-card reveal reveal-up delay-2 hover-lift" data-category="security">
-                <div class="card-tag">Strategic</div>
-                <h3>ISO/IEC 27001 Lead Implementer</h3>
-                <p>Learn to design and deploy robust security frameworks. You'll gain exhaustive knowledge on protecting
-                    organizational assets and ensuring compliance with international standards.</p>
-                <div class="card-meta">
-                    <span>Duration: 5 Days</span>
-                    <span>Level: Expert</span>
-                </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline"
-                    style="width: 100%; margin-top: auto;">Express Interest &rarr;</a>
-            </div>
-
-            <!-- Quality Management -->
-            <div class="training-card reveal reveal-up delay-3 hover-lift" data-category="quality">
-                <div class="card-tag">Core Quality</div>
-                <h3>ISO 9001 Lead Auditor</h3>
-                <p>Drive organizational excellence. This certification provides an exhaustive deep-dive into quality
-                    management, enabling you to transform business processes for maximum efficiency.</p>
-                <div class="card-meta">
-                    <span>Duration: 5 Days</span>
-                    <span>Level: Expert</span>
-                </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline"
-                    style="width: 100%; margin-top: auto;">Express Interest &rarr;</a>
-            </div>
-
-            <!-- Risk Management -->
-            <div class="training-card reveal reveal-up delay-1 hover-lift" data-category="risk">
-                <div class="card-tag">Management</div>
-                <h3>ISO 31000 Risk Manager</h3>
-                <p>Equip yourself with the tools to identify, assess, and mitigate complex risks. An exhaustive program
-                    for leaders who want to ensure long-term corporate stability.</p>
-                <div class="card-meta">
-                    <span>Duration: 3 Days</span>
-                    <span>Level: Intermediate</span>
-                </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Join
-                    Cohort &rarr;</a>
-            </div>
-
-            <!-- Business Continuity -->
-            <div class="training-card reveal reveal-up delay-2 hover-lift" data-category="resilience">
-                <div class="card-tag">Resilience</div>
-                <h3>ISO 22301 Lead Implementer</h3>
-                <p>Prepare for the unexpected. Learn exhaustive business continuity strategies to keep organizations
-                    running smoothly during any crisis or disruption.</p>
-                <div class="card-meta">
-                    <span>Duration: 5 Days</span>
-                    <span>Level: Expert</span>
-                </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline"
-                    style="width: 100%; margin-top: auto;">Apply
-                    Today &rarr;</a>
-            </div>
-
-            <!-- Cybersecurity -->
-            <div class="training-card reveal reveal-up delay-3 hover-lift" data-category="security">
-                <div class="card-tag">Elite Cyber</div>
-                <h3>Lead Cybersecurity Manager</h3>
-                <p>Join the frontlines of digital defense. This exhaustive course covers advanced cybersecurity program
-                    management, essential for modern IT leadership.</p>
-                <div class="card-meta">
-                    <span>Duration: 5 Days</span>
-                    <span>Level: Lead</span>
-                </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline"
-                    style="width: 100%; margin-top: auto;">Apply
-                    Today &rarr;</a>
-            </div>
 
             <!-- New Courses - Quality & Risk / HSE -->
             <div class="training-card reveal reveal-up delay-1 hover-lift" data-category="quality">
@@ -162,8 +71,21 @@
                     Now &rarr;</a>
             </div>
 
+            <div class="training-card reveal reveal-up delay-1 hover-lift" data-category="quality">
+                <div class="card-tag">Risk Management</div>
+                <h3>ISO 31000 Risk Manager</h3>
+                <p>Equip yourself with the tools to identify, assess, and mitigate complex risks. An exhaustive program
+                    for leaders who want to ensure long-term corporate stability.</p>
+                <div class="card-meta">
+                    <span>Duration: 3 Days</span>
+                    <span>Level: Intermediate</span>
+                </div>
+                <a href="{% url 'pages:register' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Join
+                    Cohort &rarr;</a>
+            </div>
+
             <!-- New Technical HSE Category -->
-            <div class="training-card reveal reveal-up delay-1 hover-lift" data-category="Technical & HSE">
+            <div class="training-card reveal reveal-up delay-1 hover-lift" data-category="technical">
                 <div class="card-tag">Safety Ops</div>
                 <h3>Traveaux en hauteur</h3>
                 <p>Comprehensive training on working safely at heights. Master the essential techniques and equipment
@@ -176,7 +98,7 @@
                     style="width: 100%; margin-top: auto;">Register Now &rarr;</a>
             </div>
 
-            <div class="training-card reveal reveal-up delay-2 hover-lift" data-category="Technical & HSE">
+            <div class="training-card reveal reveal-up delay-2 hover-lift" data-category="technical">
                 <div class="card-tag">Safety Ops</div>
                 <h3>Conduite Defensive</h3>
                 <p>Master defensive driving techniques. This exhaustive practical course reduces risks and ensures the
@@ -189,7 +111,7 @@
                     style="width: 100%; margin-top: auto;">Register Now &rarr;</a>
             </div>
 
-            <div class="training-card reveal reveal-up delay-3 hover-lift" data-category="Technical & HSE">
+            <div class="training-card reveal reveal-up delay-3 hover-lift" data-category="technical">
                 <div class="card-tag">Safety Ops</div>
                 <h3>Espace Confiné</h3>
                 <p>Safety protocols for working in confined spaces. An exhaustive training on atmospheric monitoring,
@@ -627,13 +549,9 @@
 
                     if (filter === 'all programs') {
                         card.style.display = 'flex';
-                    } else if (filter === 'information security' && category === 'security') {
-                        card.style.display = 'flex';
                     } else if (filter === 'quality & risk' && (category === 'quality' || category === 'risk')) {
                         card.style.display = 'flex';
-                    } else if (filter === 'continuity & resilience' && category === 'resilience') {
-                        card.style.display = 'flex';
-                    } else if (filter === 'technical & hse' && category.includes('technical')) {
+                    } else if (filter.includes('technical') && category.includes('technical')) {
                         card.style.display = 'flex';
                     } else {
                         card.style.display = 'none';

@@ -2,9 +2,7 @@ from django.db import models
 
 class Course(models.Model):
     CATEGORY_CHOICES = [
-        ('security', 'Information Security'),
         ('quality', 'Quality & Risk'),
-        ('resilience', 'Continuity & Resilience'),
         ('technical', 'Technical & HSE'),
     ]
 

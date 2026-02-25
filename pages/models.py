@@ -1,10 +1,9 @@
 from django.db import models
-from django.utils.translation import gettext_lazy as _
 
 class Course(models.Model):
     CATEGORY_CHOICES = [
-        ('quality', _('Quality & Risk')),
-        ('technical', _('Technical & HSE')),
+        ('quality', 'Quality & Risk'),
+        ('technical', 'Technical & HSE'),
     ]
 
     title = models.CharField(max_length=200)
@@ -21,14 +20,14 @@ class Course(models.Model):
 
 class Registration(models.Model):
     FORMAT_CHOICES = [
-        ('physical', _('Physical (Classroom)')),
-        ('virtual', _('Virtual (Online)')),
+        ('physical', 'Physical (Classroom)'),
+        ('virtual', 'Virtual (Online)'),
     ]
     
     STATUS_CHOICES = [
-        ('pending', _('Pending Approval')),
-        ('confirmed', _('Confirmed')),
-        ('cancelled', _('Cancelled')),
+        ('pending', 'Pending Approval'),
+        ('confirmed', 'Confirmed'),
+        ('cancelled', 'Cancelled'),
     ]
 
     full_name = models.CharField(max_length=100)

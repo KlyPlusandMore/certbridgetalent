@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load i18n %}
 
-{% block title %}{% trans "Contact Us" %} | Certibridge Talent{% endblock %}
+{% block title %}Contact Us | Certibridge Talent{% endblock %}
 
 {% block content %}
 <section class="page-header reveal reveal-in">
     <div class="container reveal reveal-up delay-1">
-        <h1>{% trans "Get in" %} <span class="accent">{% trans "Touch" %}</span></h1>
-        <p>{% trans "Our dedicated advisory team in Gisozi is available to support your professional development
-            journey." %}</p>
+        <h1>Get in <span class="accent">Touch</span></h1>
+        <p>Our dedicated advisory team in Gisozi is available to support your professional development
+            journey.</p>
     </div>
 </section>
 
@@ -17,56 +16,55 @@
     <div class="container">
         <div class="grid-2">
             <div class="contact-form-card reveal reveal-left delay-1">
-                <h3>{% trans "Send an Inquiry" %}</h3>
-                <p>{% trans "Fill out the form below and we'll get back to you within 24 hours." %}</p>
+                <h3>Send an Inquiry</h3>
+                <p>Fill out the form below and we'll get back to you within 24 hours.</p>
 
                 <form class="main-form">
                     <div class="form-row">
                         <div class="form-group">
-                            <label>{% trans "First Name" %}</label>
-                            <input type="text" placeholder="{% trans 'John' %}">
+                            <label>First Name</label>
+                            <input type="text" placeholder="John">
                         </div>
                         <div class="form-group">
-                            <label>{% trans "Last Name" %}</label>
-                            <input type="text" placeholder="{% trans 'Doe' %}">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Doe">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>{% trans "Email Address" %}</label>
+                        <label>Email Address</label>
                         <input type="email" placeholder="john@example.com">
                     </div>
                     <div class="form-group">
-                        <label>{% trans "Service Interested In" %}</label>
+                        <label>Service Interested In</label>
                         <select>
-                            <option>{% trans "PECB Certification" %}</option>
-                            <option>{% trans "Professional Training" %}</option>
-                            <option>{% trans "Corporate Partnership" %}</option>
-                            <option>{% trans "Other" %}</option>
+                            <option>PECB Certification</option>
+                            <option>Professional Training</option>
+                            <option>Corporate Partnership</option>
+                            <option>Other</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>{% trans "Message" %}</label>
-                        <textarea rows="4" placeholder="{% trans 'How can we help you?' %}"></textarea>
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="How can we help you?"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">{% trans "Submit Inquiry"
-                        %}</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
                 </form>
             </div>
 
             <div class="contact-info-panel reveal reveal-right delay-2">
                 <div class="info-card hover-lift">
-                    <h4>{% trans "Visit Us" %}</h4>
-                    <p>{% trans "Gisozi, Kigali" %}</p>
-                    <p>{% trans "Near Gisozi Memorial Center" %}</p>
-                    <p>{% trans "Kigali, Rwanda" %}</p>
+                    <h4>Visit Us</h4>
+                    <p>Gisozi, Kigali</p>
+                    <p>Near Gisozi Memorial Center</p>
+                    <p>Kigali, Rwanda</p>
                 </div>
                 <div class="info-card">
-                    <h4>{% trans "Direct Contact" %}</h4>
-                    <p><strong>{% trans "Mobile" %}:</strong> +250 788 123 456</p>
-                    <p><strong>{% trans "Email" %}:</strong> info@certibridgetalent.rw</p>
+                    <h4>Direct Contact</h4>
+                    <p><strong>Mobile:</strong> +250 788 123 456</p>
+                    <p><strong>Email:</strong> info@certibridgetalent.rw</p>
                 </div>
                 <div class="map-box reveal reveal-in delay-3">
-                    <span>{% trans "Google Maps Link (Gisozi)" %}</span>
+                    <span>Google Maps Link (Gisozi)</span>
                 </div>
             </div>
         </div>

@@ -3,16 +3,16 @@ from .models import Course, Registration
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ('title', 'category', 'is_active', 'created_at')
+    list_display = ('title', 'category', 'is_active')
     list_filter = ('category', 'is_active')
-    search_fields = ('title', 'description')
+    search_fields = ('title',)
+    list_editable = ('is_active',)
 
 @admin.register(Registration)
 class RegistrationAdmin(admin.ModelAdmin):
     list_display = ('full_name', 'email', 'course', 'training_format', 'status', 'created_at')
     list_filter = ('status', 'training_format', 'course')
-    search_fields = ('full_name', 'email', 'phone_number')
-    readonly_fields = ('created_at',)
+    search_fields = ('full_name', 'email')
     fieldsets = (
         ('Student Information', {
             'fields': ('full_name', 'email', 'phone_number')
@@ -24,3 +24,4 @@ class RegistrationAdmin(admin.ModelAdmin):
             'fields': ('status', 'created_at')
         }),
     )
+    readonly_fields = ('created_at',)

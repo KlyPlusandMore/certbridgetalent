@@ -4,4 +4,3 @@ whitenoise[compression]
 dj-database-url
 python-dotenv
 psycopg2-binary
-polib

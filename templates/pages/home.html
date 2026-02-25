@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load i18n %}
 
-{% block title %}{% trans "Home" %} | Certibridge Talent - {% trans "Excellence in Certification" %}{% endblock %}
+{% block title %}Home | Certibridge Talent - Excellence in Certification{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
 <section class="hero enhanced">
     <div class="hero-bg-image">
         <img src="{% static 'img/multi-ethnic-group-young-people-studying-with-laptop-computer.jpg' %}"
-            alt="{% trans 'Students Learning' %}">
+            alt="Students Learning">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-bg-shapes">
@@ -18,15 +17,15 @@
     </div>
     <div class="container hero-content">
         <div class="hero-text reveal reveal-left">
-            <span class="badge glass-badge">{% trans "Authorized PECB Partner" %}</span>
-            <h1>{% trans "Elevate Your Career through" %} <span class="gradient-text">{% trans "Global ISO
-                    Certification" %}</span></h1>
-            <p>{% trans "Certibridge Talent is your strategic gateway to international recognition. We provide
+            <span class="badge glass-badge">Authorized PECB Partner</span>
+            <h1>Elevate Your Career through <span class="gradient-text">Global ISO
+                    Certification</span></h1>
+            <p>Certibridge Talent is your strategic gateway to international recognition. We provide
                 exhaustive, expert-led programs designed to align your professional skills with the highest global
-                standards." %}</p>
+                standards.</p>
             <div class="hero-actions">
-                <a href="{% url 'pages:trainings' %}" class="btn btn-primary">{% trans "Explore Certifications" %}</a>
-                <a href="{% url 'pages:about' %}" class="btn btn-outline">{% trans "Learn Our Vision" %}</a>
+                <a href="{% url 'pages:trainings' %}" class="btn btn-primary">Explore Certifications</a>
+                <a href="{% url 'pages:about' %}" class="btn btn-outline">Learn Our Vision</a>
             </div>
         </div>
         <div class="hero-visual-wrapper reveal reveal-right">
@@ -35,7 +34,7 @@
                     <img src="{% static 'img/pecb-logo.png' %}" alt="PECB Logo" class="floating-logo">
                     <div class="cert-status">
                         <span class="status-dot"></span>
-                        <strong>{% trans "Active Training Partner" %}</strong>
+                        <strong>Active Training Partner</strong>
                     </div>
                 </div>
             </div>
@@ -58,19 +57,19 @@
         <div class="stats-grid">
             <div class="stat-item reveal reveal-up delay-1">
                 <div class="stat-value"><span class="counter">1000</span>+</div>
-                <div class="stat-label">{% trans "Professionals Trained" %}</div>
+                <div class="stat-label">Professionals Trained</div>
             </div>
             <div class="stat-item reveal reveal-up delay-2">
                 <div class="stat-value"><span class="counter">98</span>%</div>
-                <div class="stat-label">{% trans "Exam Success Rate" %}</div>
+                <div class="stat-label">Exam Success Rate</div>
             </div>
             <div class="stat-item reveal reveal-up delay-3">
                 <div class="stat-value"><span class="counter">50</span>+</div>
-                <div class="stat-label">{% trans "Corporate Partners" %}</div>
+                <div class="stat-label">Corporate Partners</div>
             </div>
             <div class="stat-item reveal reveal-up delay-4">
                 <div class="stat-value">PECB</div>
-                <div class="stat-label">{% trans "Elite Representative" %}</div>
+                <div class="stat-label">Elite Representative</div>
             </div>
         </div>
     </div>
@@ -80,8 +79,8 @@
 <section class="section journey light-bg reveal reveal-up">
     <div class="container">
         <div class="section-header center reveal reveal-up">
-            <span class="sub-header">{% trans "The Roadmap" %}</span>
-            <h2>{% trans "Your Journey to" %} <span class="text-primary">{% trans "Certification" %}</span></h2>
+            <span class="sub-header">The Roadmap</span>
+            <h2>Your Journey to <span class="text-primary">Certification</span></h2>
         </div>
 
         <div class="journey-visual reveal reveal-up delay-1">
@@ -92,29 +91,29 @@
         <div class="journey-flow">
             <div class="journey-step reveal reveal-up delay-1">
                 <div class="step-icon">01</div>
-                <h4>{% trans "Strategic Consultation" %}</h4>
-                <p>{% trans "Collaborate with our senior advisors to map out an exhaustive certification trajectory
-                    tailored to your industry's specific demands." %}
+                <h4>Strategic Consultation</h4>
+                <p>Collaborate with our senior advisors to map out an exhaustive certification trajectory
+                    tailored to your industry's specific demands.
                 </p>
             </div>
             <div class="journey-step-connector"></div>
             <div class="journey-step reveal reveal-up delay-2">
                 <div class="step-icon">02</div>
-                <h4>{% trans "Expert-Led Learning" %}</h4>
-                <p>{% trans "Experience immersive, exhaustive training via our state-of-the-art Gisozi campus or our
-                    premium virtual learning environment." %}</p>
+                <h4>Expert-Led Learning</h4>
+                <p>Experience immersive, exhaustive training via our state-of-the-art Gisozi campus or our
+                    premium virtual learning environment.</p>
             </div>
             <div class="journey-step-connector"></div>
             <div class="journey-step reveal reveal-up delay-3">
                 <div class="step-icon">03</div>
-                <h4>{% trans "Certified Excellence" %}</h4>
-                <p>{% trans "Successfully complete your PECB examinations and join an elite tier of globally recognized
-                    professionals in the Rwandan market." %}
+                <h4>Certified Excellence</h4>
+                <p>Successfully complete your PECB examinations and join an elite tier of globally recognized
+                    professionals in the Rwandan market.
                 </p>
             </div>
         </div>
         <div class="journey-cta text-center reveal reveal-up">
-            <a href="{% url 'pages:register' %}" class="btn btn-secondary">{% trans "Start Your Journey Today" %}</a>
+            <a href="{% url 'pages:register' %}" class="btn btn-secondary">Start Your Journey Today</a>
         </div>
     </div>
 </section>
@@ -123,36 +122,36 @@
 <section class="section certifications reveal reveal-up">
     <div class="container">
         <div class="section-header reveal reveal-up">
-            <h2>{% trans "Accelerate Your Career with Exclusive PECB Programs" %}</h2>
-            <p>{% trans "Our most sought-after certifications for 2026. Join our upcoming cohorts." %}</p>
+            <h2>Accelerate Your Career with Exclusive PECB Programs</h2>
+            <p>Our most sought-after certifications for 2026. Join our upcoming cohorts.</p>
         </div>
         <div class="cert-grid">
             <div class="cert-card featured reveal reveal-up delay-1 hover-lift">
                 <div class="cert-icon">👷</div>
                 <h3>ISO 45001</h3>
-                <p>{% trans "Occupational Health & Safety. Master the exhaustive standards for a safer, healthier
-                    workplace." %}</p>
-                <a href="{% url 'pages:trainings' %}" class="link-arrow">{% trans "View Program Details" %} &rarr;</a>
+                <p>Occupational Health & Safety. Master the exhaustive standards for a safer, healthier
+                    workplace.</p>
+                <a href="{% url 'pages:trainings' %}" class="link-arrow">View Program Details &rarr;</a>
             </div>
             <div class="cert-card reveal reveal-up delay-2 hover-lift">
                 <div class="cert-icon">🥗</div>
                 <h3>ISO 22000</h3>
-                <p>{% trans "Food Safety Management. Ensure the highest standards across the supply chain." %}</p>
-                <a href="{% url 'pages:trainings' %}" class="link-arrow">{% trans "View Program Details" %} &rarr;</a>
+                <p>Food Safety Management. Ensure the highest standards across the supply chain.</p>
+                <a href="{% url 'pages:trainings' %}" class="link-arrow">View Program Details &rarr;</a>
             </div>
             <div class="cert-card reveal reveal-up delay-3 hover-lift">
                 <div class="cert-icon">🌿</div>
                 <h3>ISO 14001</h3>
-                <p>{% trans "Environmental Management. Lead your organization toward a sustainable and compliant
-                    future." %}</p>
-                <a href="{% url 'pages:trainings' %}" class="link-arrow">{% trans "View Program Details" %} &rarr;</a>
+                <p>Environmental Management. Lead your organization toward a sustainable and compliant
+                    future.</p>
+                <a href="{% url 'pages:trainings' %}" class="link-arrow">View Program Details &rarr;</a>
             </div>
             <div class="cert-card reveal reveal-up delay-1 hover-lift">
                 <div class="cert-icon">🚗</div>
-                <h3>{% trans "Technical Safety" %}</h3>
-                <p>{% trans "Defensive Driving, Work at Heights, and more. Exhaustive safety training for high-risk
-                    operations." %}</p>
-                <a href="{% url 'pages:trainings' %}" class="link-arrow">{% trans "Explore Safety Modules" %} &rarr;</a>
+                <h3>Technical Safety</h3>
+                <p>Defensive Driving, Work at Heights, and more. Exhaustive safety training for high-risk
+                    operations.</p>
+                <a href="{% url 'pages:trainings' %}" class="link-arrow">Explore Safety Modules &rarr;</a>
             </div>
         </div>
     </div>
@@ -162,14 +161,14 @@
 <section class="section final-cta reveal reveal-in">
     <div class="container">
         <div class="cta-card reveal reveal-in delay-1">
-            <h2>{% trans "Take the Next Step in Your Professional Evolution" %}</h2>
-            <p>{% trans "Don't just stay relevant—become indispensable. Join Certibridge Talent today and bridge the gap
-                to a brighter future." %}</p>
+            <h2>Take the Next Step in Your Professional Evolution</h2>
+            <p>Don't just stay relevant—become indispensable. Join Certibridge Talent today and bridge the gap
+                to a brighter future.</p>
             <div class="btn-group">
-                <a href="{% url 'pages:register' %}" class="btn btn-secondary">{% trans "Apply for Training" %}</a>
+                <a href="{% url 'pages:register' %}" class="btn btn-secondary">Apply for Training</a>
                 <a href="{% url 'pages:about' %}" class="btn btn-outline"
-                    style="color: white !important; border-color: rgba(255,255,255,0.3);">{% trans "Learn Our
-                    Methodology" %}</a>
+                    style="color: white !important; border-color: rgba(255,255,255,0.3);">Learn Our
+                    Methodology</a>
             </div>
         </div>
     </div>

@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}Course Registration | Certibridge Talent{% endblock %}
 
 {% block content %}
 <section class="page-header reveal reveal-in">
     <div class="container reveal reveal-up delay-1">
-        <h1>Certification <span class="accent">Registration</span></h1>
-        <p>Take the first step towards your global professional certification.</p>
+        <h1>{% trans "Certification" %} <span class="accent">{% trans "Registration" %}</span></h1>
+        <p>{% trans "Take the first step towards your global professional certification." %}</p>
     </div>
 </section>
 
@@ -17,32 +18,34 @@
             <!-- Left Side: Interactive Process Timeline -->
             <div class="registration-info reveal reveal-left">
                 <div class="timeline-wrapper">
-                    <span class="sub-header">Registration Process</span>
-                    <h3>Your Journey to <span class="text-primary">Excellence</span></h3>
+                    <span class="sub-header">{% trans "Registration Process" %}</span>
+                    <h3>{% trans "Your Journey to" %} <span class="text-primary">{% trans "Excellence" %}</span></h3>
 
                     <div class="timeline">
                         <div class="timeline-item active">
                             <div class="timeline-marker">01</div>
                             <div class="timeline-content">
-                                <h5>Application Submission</h5>
-                                <p>Fill out the enrollment form with your professional details and selected program.</p>
+                                <h5>{% trans "Application Submission" %}</h5>
+                                <p>{% trans "Fill out the enrollment form with your professional details and selected
+                                    program." %}</p>
                             </div>
                         </div>
                         <div class="timeline-connector"></div>
                         <div class="timeline-item">
                             <div class="timeline-marker">02</div>
                             <div class="timeline-content">
-                                <h5>Academic Review</h5>
-                                <p>Our advisors in Gisozi review your background to ensure the program matches your
-                                    goals.</p>
+                                <h5>{% trans "Academic Review" %}</h5>
+                                <p>{% trans "Our advisors in Gisozi review your background to ensure the program matches
+                                    your goals." %}</p>
                             </div>
                         </div>
                         <div class="timeline-connector"></div>
                         <div class="timeline-item">
                             <div class="timeline-marker">03</div>
                             <div class="timeline-content">
-                                <h5>Official Admission</h5>
-                                <p>Receive your admission letter, cohort schedule, and global PECB resources.</p>
+                                <h5>{% trans "Official Admission" %}</h5>
+                                <p>{% trans "Receive your admission letter, cohort schedule, and global PECB resources."
+                                    %}</p>
                             </div>
                         </div>
                     </div>
@@ -50,9 +53,10 @@
                     <div class="support-sidebar-card glass-card">
                         <div class="support-icon">💬</div>
                         <div>
-                            <h5>Need Guidance?</h5>
-                            <p>Our advisors are ready to help you choose the right path.</p>
-                            <a href="https://wa.me/250792899301" class="btn btn-outline btn-sm">Chat with Us</a>
+                            <h5>{% trans "Need Guidance?" %}</h5>
+                            <p>{% trans "Our advisors are ready to help you choose the right path." %}</p>
+                            <a href="https://wa.me/250792899301" class="btn btn-outline btn-sm">{% trans "Chat with Us"
+                                %}</a>
                         </div>
                     </div>
                 </div>
@@ -62,15 +66,15 @@
             <div class="registration-form-wrapper reveal reveal-right">
                 <div class="form-card-premium">
                     <div class="form-header">
-                        <h4>Enrollment Application</h4>
-                        <p>Join our next cohort of global professionals.</p>
+                        <h4>{% trans "Enrollment Application" %}</h4>
+                        <p>{% trans "Join our next cohort of global professionals." %}</p>
                     </div>
 
                     <form method="post" class="premium-form registration-form">
                         {% csrf_token %}
 
                         <div class="form-group-premium">
-                            <label>Full Name</label>
+                            <label>{% trans "Full Name" %}</label>
                             <div class="input-wrapper">
                                 {{ form.full_name }}
                                 <span class="focus-border"></span>
@@ -82,7 +86,7 @@
 
                         <div class="form-row">
                             <div class="form-group-premium">
-                                <label>Email Address</label>
+                                <label>{% trans "Email Address" %}</label>
                                 <div class="input-wrapper">
                                     {{ form.email }}
                                     <span class="focus-border"></span>
@@ -92,7 +96,7 @@
                                 {% endif %}
                             </div>
                             <div class="form-group-premium">
-                                <label>Phone Number</label>
+                                <label>{% trans "Phone Number" %}</label>
                                 <div class="input-wrapper">
                                     {{ form.phone_number }}
                                     <span class="focus-border"></span>
@@ -105,7 +109,7 @@
 
                         <div class="form-row">
                             <div class="form-group-premium">
-                                <label>Certification Program</label>
+                                <label>{% trans "Certification Program" %}</label>
                                 <div class="input-wrapper">
                                     {{ form.course }}
                                     <span class="focus-border"></span>
@@ -115,7 +119,7 @@
                                 {% endif %}
                             </div>
                             <div class="form-group-premium">
-                                <label>Training Format</label>
+                                <label>{% trans "Training Format" %}</label>
                                 <div class="input-wrapper">
                                     {{ form.training_format }}
                                     <span class="focus-border"></span>
@@ -127,7 +131,7 @@
                         </div>
 
                         <div class="form-group-premium">
-                            <label>Additional Information (Optional)</label>
+                            <label>{% trans "Additional Information (Optional)" %}</label>
                             <div class="input-wrapper">
                                 {{ form.message }}
                                 <span class="focus-border"></span>
@@ -138,7 +142,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-secondary btn-full btn-glow">
-                            Submit Application &rarr;
+                            {% trans "Submit Application" %} &rarr;
                         </button>
                     </form>
                 </div>

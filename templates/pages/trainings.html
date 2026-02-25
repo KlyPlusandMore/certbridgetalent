@@ -1,127 +1,126 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}Training & Certifications | Certibridge Talent{% endblock %}
 
 {% block content %}
 <section class="page-header reveal reveal-in">
     <div class="container reveal reveal-up delay-1">
-        <h1>Professional <span class="accent">Training</span> & Certifications</h1>
-        <p>Global standards, local expertise. Become a certified professional with PECB and Certibridge Talent.</p>
+        <h1>{% trans "Professional" %} <span class="accent">{% trans "Training" %}</span> & Certifications</h1>
+        <p>{% trans "Global standards, local expertise. Become a certified professional with PECB and Certibridge
+            Talent." %}</p>
     </div>
 </section>
 
 <section class="section training-catalog reveal reveal-up">
     <div class="container">
         <div class="section-header reveal reveal-up">
-            <span class="sub-header">Exhaustive Certification Catalog</span>
-            <h2>Future-Proof Your Career in <span class="text-primary">2026</span></h2>
-            <p>Our training programs are meticulously designed to provide exhaustive knowledge and practical skills that
-                translate directly to professional success. Choose your path to excellence.</p>
+            <span class="sub-header">{% trans "Exhaustive Certification Catalog" %}</span>
+            <h2>{% trans "Future-Proof Your Career in" %} <span class="text-primary">2026</span></h2>
+            <p>{% trans "Our training programs are meticulously designed to provide exhaustive knowledge and practical
+                skills that translate directly to professional success. Choose your path to excellence." %}</p>
         </div>
 
         <div class="catalog-filters">
-            <button class="filter-btn active">All Programs</button>
-            <button class="filter-btn">Quality & Risk</button>
-            <button class="filter-btn">Technical & HSE</button>
+            <button class="filter-btn active">{% trans "All Programs" %}</button>
+            <button class="filter-btn">{% trans "Quality & Risk" %}</button>
+            <button class="filter-btn">{% trans "Technical & HSE" %}</button>
         </div>
 
         <div class="training-grid">
 
             <!-- New Courses - Quality & Risk / HSE -->
             <div class="training-card reveal reveal-up delay-1 hover-lift" data-category="quality">
-                <div class="card-tag">Health & Safety</div>
+                <div class="card-tag">{% trans "Health & Safety" %}</div>
                 <h3>ISO 45001 Lead Auditor</h3>
-                <p>Master Occupational Health and Safety. This exhaustive training equips you to manage and audit OHSMS,
-                    ensuring a safe and healthy environment for employees.</p>
+                <p>{% trans "Master Occupational Health and Safety. This exhaustive training equips you to manage and
+                    audit OHSMS, ensuring a safe and healthy environment for employees." %}</p>
                 <div class="card-meta">
-                    <span>Duration: 5 Days</span>
-                    <span>Level: Expert</span>
+                    <span>{% trans "Duration" %}: 5 {% trans "Days" %}</span>
+                    <span>{% trans "Level" %}: {% trans "Expert" %}</span>
                 </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline"
-                    style="width: 100%; margin-top: auto;">Register
-                    Now &rarr;</a>
+                <a href="{% url 'pages:register' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">{%
+                    trans "Register Now" %} &rarr;</a>
             </div>
 
             <div class="training-card reveal reveal-up delay-2 hover-lift" data-category="quality">
-                <div class="card-tag">Environment</div>
+                <div class="card-tag">{% trans "Environment" %}</div>
                 <h3>ISO 14001 Lead Auditor</h3>
-                <p>Lead the way in environmental excellence. Learn how to manage and audit environmental impacts with
-                    this
-                    exhaustive international standard.</p>
+                <p>{% trans "Lead the way in environmental excellence. Learn how to manage and audit environmental
+                    impacts with this exhaustive international standard." %}</p>
                 <div class="card-meta">
-                    <span>Duration: 5 Days</span>
-                    <span>Level: Expert</span>
+                    <span>{% trans "Duration" %}: 5 {% trans "Days" %}</span>
+                    <span>{% trans "Level" %}: {% trans "Expert" %}</span>
                 </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Join
-                    Cohort &rarr;</a>
+                <a href="{% url 'pages:register' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">{%
+                    trans "Join Cohort" %} &rarr;</a>
             </div>
 
             <div class="training-card reveal reveal-up delay-3 hover-lift" data-category="quality">
-                <div class="card-tag">Food Safety</div>
+                <div class="card-tag">{% trans "Food Safety" %}</div>
                 <h3>ISO 22000 Lead Auditor</h3>
-                <p>Ensure food safety at every stage of the supply chain. An exhaustive deep-dive into Food Safety
-                    Management Systems (FSMS) for global compliance.</p>
+                <p>{% trans "Ensure food safety at every stage of the supply chain. An exhaustive deep-dive into Food
+                    Safety Management Systems (FSMS) for global compliance." %}</p>
                 <div class="card-meta">
-                    <span>Duration: 5 Days</span>
-                    <span>Level: Expert</span>
+                    <span>{% trans "Duration" %}: 5 {% trans "Days" %}</span>
+                    <span>{% trans "Level" %}: {% trans "Expert" %}</span>
                 </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline"
-                    style="width: 100%; margin-top: auto;">Register
-                    Now &rarr;</a>
+                <a href="{% url 'pages:register' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">{%
+                    trans "Register Now" %} &rarr;</a>
             </div>
 
             <div class="training-card reveal reveal-up delay-1 hover-lift" data-category="quality">
-                <div class="card-tag">Risk Management</div>
+                <div class="card-tag">{% trans "Risk Management" %}</div>
                 <h3>ISO 31000 Risk Manager</h3>
-                <p>Equip yourself with the tools to identify, assess, and mitigate complex risks. An exhaustive program
-                    for leaders who want to ensure long-term corporate stability.</p>
+                <p>{% trans "Equip yourself with the tools to identify, assess, and mitigate complex risks. An
+                    exhaustive program for leaders who want to ensure long-term corporate stability." %}</p>
                 <div class="card-meta">
-                    <span>Duration: 3 Days</span>
-                    <span>Level: Intermediate</span>
+                    <span>{% trans "Duration" %}: 3 {% trans "Days" %}</span>
+                    <span>{% trans "Level" %}: {% trans "Intermediate" %}</span>
                 </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">Join
-                    Cohort &rarr;</a>
+                <a href="{% url 'pages:register' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">{%
+                    trans "Join Cohort" %} &rarr;</a>
             </div>
 
             <!-- New Technical HSE Category -->
             <div class="training-card reveal reveal-up delay-1 hover-lift" data-category="technical">
-                <div class="card-tag">Safety Ops</div>
-                <h3>Traveaux en hauteur</h3>
-                <p>Comprehensive training on working safely at heights. Master the essential techniques and equipment
-                    requirements for exhaustive safety compliance.</p>
+                <div class="card-tag">{% trans "Safety Ops" %}</div>
+                <h3>{% trans "Traveaux en hauteur" %}</h3>
+                <p>{% trans "Comprehensive training on working safely at heights. Master the essential techniques and
+                    equipment requirements for exhaustive safety compliance." %}</p>
                 <div class="card-meta">
-                    <span>Duration: 2 Days</span>
-                    <span>Level: Technical</span>
+                    <span>{% trans "Duration" %}: 2 {% trans "Days" %}</span>
+                    <span>{% trans "Level" %}: {% trans "Technical" %}</span>
                 </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline"
-                    style="width: 100%; margin-top: auto;">Register Now &rarr;</a>
+                <a href="{% url 'pages:register' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">{%
+                    trans "Register Now" %} &rarr;</a>
             </div>
 
             <div class="training-card reveal reveal-up delay-2 hover-lift" data-category="technical">
-                <div class="card-tag">Safety Ops</div>
-                <h3>Conduite Defensive</h3>
-                <p>Master defensive driving techniques. This exhaustive practical course reduces risks and ensures the
-                    highest standards of operational safety on the road.</p>
+                <div class="card-tag">{% trans "Safety Ops" %}</div>
+                <h3>{% trans "Conduite Defensive" %}</h3>
+                <p>{% trans "Master defensive driving techniques. This exhaustive practical course reduces risks and
+                    ensures the highest standards of operational safety on the road." %}</p>
                 <div class="card-meta">
-                    <span>Duration: 3 Days</span>
-                    <span>Level: Operational</span>
+                    <span>{% trans "Duration" %}: 3 {% trans "Days" %}</span>
+                    <span>{% trans "Level" %}: {% trans "Operational" %}</span>
                 </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline"
-                    style="width: 100%; margin-top: auto;">Register Now &rarr;</a>
+                <a href="{% url 'pages:register' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">{%
+                    trans "Register Now" %} &rarr;</a>
             </div>
 
             <div class="training-card reveal reveal-up delay-3 hover-lift" data-category="technical">
-                <div class="card-tag">Safety Ops</div>
-                <h3>Espace Confiné</h3>
-                <p>Safety protocols for working in confined spaces. An exhaustive training on atmospheric monitoring,
-                    rescue procedures, and confined space management.</p>
+                <div class="card-tag">{% trans "Safety Ops" %}</div>
+                <h3>{% trans "Espace Confiné" %}</h3>
+                <p>{% trans "Safety protocols for working in confined spaces. An exhaustive training on atmospheric
+                    monitoring, rescue procedures, and confined space management." %}</p>
                 <div class="card-meta">
-                    <span>Duration: 2 Days</span>
-                    <span>Level: Technical</span>
+                    <span>{% trans "Duration" %}: 2 {% trans "Days" %}</span>
+                    <span>{% trans "Level" %}: {% trans "Technical" %}</span>
                 </div>
-                <a href="{% url 'pages:register' %}" class="btn btn-outline"
-                    style="width: 100%; margin-top: auto;">Register Now &rarr;</a>
+                <a href="{% url 'pages:register' %}" class="btn btn-outline" style="width: 100%; margin-top: auto;">{%
+                    trans "Register Now" %} &rarr;</a>
             </div>
         </div>
     </div>
@@ -131,15 +130,16 @@
     <div class="container">
         <div class="grid-2">
             <div class="technical-text reveal reveal-left">
-                <h2>Excellence in <span class="text-primary">Technical & HSE</span></h2>
-                <p>Our safety and technical modules are led by industry veterans who bring exhaustive field experience
-                    to the classroom. We ensure your team is trained to the highest safety benchmarks.</p>
+                <h2>{% trans "Excellence in" %} <span class="text-primary">{% trans "Technical & HSE" %}</span></h2>
+                <p>{% trans "Our safety and technical modules are led by industry veterans who bring exhaustive field
+                    experience to the classroom. We ensure your team is trained to the highest safety benchmarks." %}
+                </p>
                 <div class="tech-tags">
-                    <span class="tech-tag">✓ HSE Compliance</span>
-                    <span class="tech-tag">✓ Defensive Skills</span>
-                    <span class="tech-tag">✓ Rescue Protocols</span>
+                    <span class="tech-tag">✓ {% trans "HSE Compliance" %}</span>
+                    <span class="tech-tag">✓ {% trans "Defensive Skills" %}</span>
+                    <span class="tech-tag">✓ {% trans "Rescue Protocols" %}</span>
                 </div>
-                <a href="{% url 'pages:contact' %}" class="btn btn-outline">Request On-site Training</a>
+                <a href="{% url 'pages:contact' %}" class="btn btn-outline">{% trans "Request On-site Training" %}</a>
             </div>
             <div class="technical-visual reveal reveal-right">
                 <img src="{% static 'img/focused-architects-working-new-project.jpg' %}" alt="Technical Professionals"
@@ -161,22 +161,23 @@
                 </div>
             </div>
             <div class="why-text reveal reveal-right">
-                <h2>Why Get Certified with <span class="text-primary">Certibridge Talent</span>?</h2>
+                <h2>{% trans "Why Get Certified with" %} <span class="text-primary">{% trans "Certibridge Talent"
+                        %}</span>?</h2>
                 <div class="perks">
                     <div class="perk">
-                        <h4>In-Depth Methodology</h4>
-                        <p>Our training is exhaustive, going beyond the textbook to provide real-world insights into ISO
-                            implementation and auditing.</p>
+                        <h4>{% trans "In-Depth Methodology" %}</h4>
+                        <p>{% trans "Our training is exhaustive, going beyond the textbook to provide real-world
+                            insights into ISO implementation and auditing." %}</p>
                     </div>
                     <div class="perk">
-                        <h4>Elite Networking</h4>
-                        <p>Join a community of certified professionals in Kigali. We foster connections that lead to
-                            career breakthroughs.</p>
+                        <h4>{% trans "Elite Networking" %}</h4>
+                        <p>{% trans "Join a community of certified professionals in Kigali. We foster connections that
+                            lead to career breakthroughs." %}</p>
                     </div>
                     <div class="perk">
-                        <h4>PECB Global Exam Access</h4>
-                        <p>Seamless access to PECB global examinations, ensuring your credentials carry the weight of
-                            international authority.</p>
+                        <h4>{% trans "PECB Global Exam Access" %}</h4>
+                        <p>{% trans "Seamless access to PECB global examinations, ensuring your credentials carry the
+                            weight of international authority." %}</p>
                     </div>
                 </div>
             </div>
@@ -187,13 +188,15 @@
 <section class="section training-cta reveal reveal-in">
     <div class="container">
         <div class="cta-inner reveal reveal-up delay-1">
-            <h2>Ready to Start Your Certification Journey?</h2>
-            <p>Join our next cohort in Kigali. We provide both physical and virtual training options tailored to your
-                schedule.</p>
+            <h2>{% trans "Ready to Start Your Certification Journey?" %}</h2>
+            <p>{% trans "Join our next cohort in Kigali. We provide both physical and virtual training options tailored
+                to your schedule." %}</p>
             <div class="cta-btns">
-                <a href="{% url 'pages:register' %}" class="btn btn-secondary">Register for Next Cohort</a>
+                <a href="{% url 'pages:register' %}" class="btn btn-secondary">{% trans "Register for Next Cohort"
+                    %}</a>
                 <a href="tel:+250788123456" class="btn btn-outline"
-                    style="color: white !important; border-color: rgba(255,255,255,0.3);">Speak with an Advisor</a>
+                    style="color: white !important; border-color: rgba(255,255,255,0.3);">{% trans "Speak with an
+                    Advisor" %}</a>
             </div>
         </div>
     </div>

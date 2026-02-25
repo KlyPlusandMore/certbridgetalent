@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}Registration Successful | Certibridge Talent{% endblock %}
 
@@ -20,14 +21,15 @@
                 <div class="success-icon-main">✓</div>
             </div>
 
-            <h2>Application <span class="text-primary">Submitted!</span></h2>
-            <p class="lead-premium">Your journey towards global certification has officially begun. We've received your
-                enrollment details and our team is already reviewing your application.</p>
+            <h2>{% trans "Application" %} <span class="text-primary">{% trans "Submitted!" %}</span></h2>
+            <p class="lead-premium">{% trans "Your journey towards global certification has officially begun. We've
+                received your enrollment details and our team is already reviewing your application." %}</p>
 
             <div class="enrollment-summary">
-                <div class="summary-badge">Official Record: CB-2026-ENROLL</div>
+                <div class="summary-badge">{% trans "Official Record" %}: CB-2026-ENROLL</div>
                 <div class="summary-details">
-                    <p>A confirmation email has been sent to your inbox with your application receipt and next steps.
+                    <p>{% trans "A confirmation email has been sent to your inbox with your application receipt and next
+                        steps." %}
                     </p>
                 </div>
             </div>
@@ -35,27 +37,27 @@
             <div class="success-roadmap-flat">
                 <div class="roadmap-step">
                     <span class="dot"></span>
-                    <p>Review (24h)</p>
+                    <p>{% trans "Review" %} (24h)</p>
                 </div>
                 <div class="roadmap-connector"></div>
                 <div class="roadmap-step">
                     <span class="dot"></span>
-                    <p>Admission</p>
+                    <p>{% trans "Admission" %}</p>
                 </div>
                 <div class="roadmap-connector"></div>
                 <div class="roadmap-step">
                     <span class="dot"></span>
-                    <p>Cohort Start</p>
+                    <p>{% trans "Cohort Start" %}</p>
                 </div>
             </div>
 
             <div class="success-actions-premium">
-                <a href="{% url 'pages:home' %}" class="btn btn-primary btn-glow">Return to Dashboard</a>
-                <a href="{% url 'pages:trainings' %}" class="btn btn-outline">View Program Catalog</a>
+                <a href="{% url 'pages:home' %}" class="btn btn-primary btn-glow">{% trans "Return to Dashboard" %}</a>
+                <a href="{% url 'pages:trainings' %}" class="btn btn-outline">{% trans "View Program Catalog" %}</a>
             </div>
 
-            <p class="support-text">Questions about your cohort? <a href="https://wa.me/250792899301"
-                    class="wa-link">Chat with an Advisor</a></p>
+            <p class="support-text">{% trans "Questions about your cohort?" %} <a href="https://wa.me/250792899301"
+                    class="wa-link">{% trans "Chat with an Advisor" %}</a></p>
         </div>
     </div>
 </section>

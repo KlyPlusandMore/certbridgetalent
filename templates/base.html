@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,11 +34,30 @@
                 <img src="{% static 'img/logo.jpeg' %}" alt="Certibridge Talent Logo">
             </a>
             <nav class="nav-links" id="navLinks">
-                <a href="{% url 'pages:home' %}" class="nav-link">Home</a>
-                <a href="{% url 'pages:about' %}" class="nav-link">About Us</a>
-                <a href="{% url 'pages:trainings' %}" class="nav-link">Training</a>
-                <a href="{% url 'pages:register' %}" class="nav-link">Register</a>
-                <a href="{% url 'pages:contact' %}" class="btn btn-primary">Contact Us</a>
+                <a href="{% url 'pages:home' %}" class="nav-link">{% trans "Home" %}</a>
+                <a href="{% url 'pages:about' %}" class="nav-link">{% trans "About Us" %}</a>
+                <a href="{% url 'pages:trainings' %}" class="nav-link">{% trans "Training" %}</a>
+                <a href="{% url 'pages:register' %}" class="nav-link">{% trans "Register" %}</a>
+
+                <div class="lang-switcher">
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}">
+                        <select name="language" onchange="this.form.submit()">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                            <option value="{{ language.code }}" {% if language.code==LANGUAGE_CODE %}selected{% endif
+                                %}>
+                                {{ language.name_local }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </form>
+                </div>
+
+                <a href="{% url 'pages:contact' %}" class="btn btn-primary">{% trans "Contact Us" %}</a>
             </nav>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
                 <span></span>
@@ -100,28 +120,29 @@
                         <img src="{% static 'img/logo.jpeg' %}" alt="Certibridge Talent Logo"
                             style="height: 40px; filter: grayscale(1) brightness(2);">
                     </a>
-                    <p>Building excellence through world-class certification and professional training. Proud PECB
-                        Representative in Rwanda.</p>
+                    <p>{% trans "Building excellence through world-class certification and professional training. Proud
+                        PECB Representative in Rwanda." %}</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>{% trans "Quick Links" %}</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="{% url 'pages:trainings' %}">Certifications</a></li>
-                        <li><a href="{% url 'pages:register' %}">Register Now</a></li>
-                        <li><a href="{% url 'pages:contact' %}">Contact</a></li>
+                        <li><a href="{% url 'pages:home' %}">{% trans "Home" %}</a></li>
+                        <li><a href="{% url 'pages:about' %}">{% trans "About Us" %}</a></li>
+                        <li><a href="{% url 'pages:trainings' %}">{% trans "Certifications" %}</a></li>
+                        <li><a href="{% url 'pages:register' %}">{% trans "Register Now" %}</a></li>
+                        <li><a href="{% url 'pages:contact' %}">{% trans "Contact" %}</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>Find Us</h4>
-                    <p>Gisozi, Kigali, Rwanda</p>
-                    <p>Email: info@certibridgetalent.com</p>
-                    <p>Phone: +250 123 456 789</p>
+                    <h4>{% trans "Find Us" %}</h4>
+                    <p>{% trans "Gisozi, Kigali, Rwanda" %}</p>
+                    <p>{% trans "Email" %}: info@certibridgetalent.com</p>
+                    <p>{% trans "Phone" %}: +250 123 456 789</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; {% now "Y" %} Certibridge Talent. All rights reserved. | PECB Authorized Partner</p>
+                <p>&copy; {% now "Y" %} {% trans "Certibridge Talent. All rights reserved. | PECB Authorized Partner" %}
+                </p>
             </div>
         </div>
     </footer>

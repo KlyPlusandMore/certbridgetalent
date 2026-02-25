@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 import os
 from pathlib import Path
+from django.utils.translation import gettext_lazy as _
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -59,6 +60,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -126,6 +128,15 @@ TIME_ZONE = 'Africa/Kigali'
 USE_I18N = True
 
 USE_TZ = True
+
+LANGUAGES = [
+    ('en', _('English')),
+    ('fr', _('French')),
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
 
 
 # Static files (CSS, JavaScript, Images)

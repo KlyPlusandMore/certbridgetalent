@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-25 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Home"
+msgstr "Accueil"
+
+msgid "About Us"
+msgstr "À propos"
+
+msgid "Certifications"
+msgstr "Certifications"
+
+msgid "Register Now"
+msgstr "S'inscrire"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Quick Links"
+msgstr "Liens Rapides"
+
+msgid "Find Us"
+msgstr "Nous Trouver"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Phone"
+msgstr "Téléphone"
+
+msgid "Building excellence through world-class certification and professional training. Proud PECB Representative in Rwanda."
+msgstr "Bâtir l'excellence grâce à des certifications et une formation professionnelle de classe mondiale. Fier représentant de PECB au Rwanda."
+
+msgid "Kigali, Rwanda"
+msgstr "Kigali, Rwanda"
+
+msgid "Gisozi, Kigali, Rwanda"
+msgstr "Gisozi, Kigali, Rwanda"
+
+msgid "Quality & Risk"
+msgstr "Qualité et Risque"
+
+msgid "Technical & HSE"
+msgstr "Technique et HSE"
+
+msgid "Explore Programs"
+msgstr "Explorer les Programmes"
+
+msgid "Excellence in Global"
+msgstr "L'Excellence dans la"
+
+msgid "Professional Certification"
+msgstr "Certification Professionnelle"
+
+msgid "Kigali's leading PECB Authorized Representative"
+msgstr "Le principal représentant autorisé de PECB à Kigali"
+
+msgid "About"
+msgstr "À propos de"
+
+msgid "Certibridge Talent"
+msgstr "Certibridge Talent"
+
+msgid "A journey of professional excellence and global certification."
+msgstr "Un voyage vers l'excellence professionnelle et la certification mondiale."
+
+msgid "Our Mission & Vision"
+msgstr "Notre Mission et Vision"
+
+msgid "Integrity"
+msgstr "Intégrité"
+
+msgid "Excellence"
+msgstr "Excellence"
+
+msgid "Bespoke"
+msgstr "Solutions"
+
+msgid "Corporate Solutions"
+msgstr "Alternatives sur Mesure"
+
+msgid "Your Full Name"
+msgstr "Votre Nom Complet"
+
+msgid "Email Address"
+msgstr "Adresse Email"
+
+msgid "Select a Certification Program"
+msgstr "Sélectionnez un programme de certification"
+
+msgid "Thank you, %(name)s! Your registration for %(course)s has been received."
+msgstr "Merci, %(name)s ! Votre inscription pour %(course)s a été reçue."

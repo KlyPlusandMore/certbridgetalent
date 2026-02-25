@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, View
 from django.contrib import messages
+from django.utils.translation import gettext as _
 from .forms import RegistrationForm
 from .models import Course
 
@@ -34,7 +35,10 @@ class RegisterView(View):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             registration = form.save()
-            messages.success(request, f"Thank you, {registration.full_name}! Your registration for {registration.course.title} has been received.")
+            messages.success(request, _("Thank you, %(name)s! Your registration for %(course)s has been received.") % {
+                'name': registration.full_name,
+                'course': registration.course.title
+            })
             return redirect('pages:register_success')
         
         return render(request, self.template_name, {'form': form})

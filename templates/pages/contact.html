@@ -2,13 +2,14 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}Contact Us | Certibridge Talent{% endblock %}
+{% block title %}{% trans "Contact Us" %} | Certibridge Talent{% endblock %}
 
 {% block content %}
 <section class="page-header reveal reveal-in">
     <div class="container reveal reveal-up delay-1">
         <h1>{% trans "Get in" %} <span class="accent">{% trans "Touch" %}</span></h1>
-        <p>{% trans "Our team in Gisozi, Kigali is ready to assist you." %}</p>
+        <p>{% trans "Our dedicated advisory team in Gisozi is available to support your professional development
+            journey." %}</p>
     </div>
 </section>
 
@@ -23,11 +24,11 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label>{% trans "First Name" %}</label>
-                            <input type="text" placeholder="John">
+                            <input type="text" placeholder="{% trans 'John' %}">
                         </div>
                         <div class="form-group">
                             <label>{% trans "Last Name" %}</label>
-                            <input type="text" placeholder="Doe">
+                            <input type="text" placeholder="{% trans 'Doe' %}">
                         </div>
                     </div>
                     <div class="form-group">

@@ -2,14 +2,14 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}Home | Certibridge Talent - Excellence in Certification{% endblock %}
+{% block title %}{% trans "Home" %} | Certibridge Talent - {% trans "Excellence in Certification" %}{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
 <section class="hero enhanced">
     <div class="hero-bg-image">
         <img src="{% static 'img/multi-ethnic-group-young-people-studying-with-laptop-computer.jpg' %}"
-            alt="Students Learning">
+            alt="{% trans 'Students Learning' %}">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-bg-shapes">
@@ -19,9 +19,11 @@
     <div class="container hero-content">
         <div class="hero-text reveal reveal-left">
             <span class="badge glass-badge">{% trans "Authorized PECB Partner" %}</span>
-            <h1>{% trans "Bridge Your Future to" %} <span class="gradient-text">{% trans "Global Success" %}</span></h1>
-            <p>{% trans "Master the world's most recognized ISO standards. We provide exhaustive, expert-led training to
-                turn your potential into certified excellence." %}</p>
+            <h1>{% trans "Elevate Your Career through" %} <span class="gradient-text">{% trans "Global ISO
+                    Certification" %}</span></h1>
+            <p>{% trans "Certibridge Talent is your strategic gateway to international recognition. We provide
+                exhaustive, expert-led programs designed to align your professional skills with the highest global
+                standards." %}</p>
             <div class="hero-actions">
                 <a href="{% url 'pages:trainings' %}" class="btn btn-primary">{% trans "Explore Certifications" %}</a>
                 <a href="{% url 'pages:about' %}" class="btn btn-outline">{% trans "Learn Our Vision" %}</a>
@@ -90,23 +92,24 @@
         <div class="journey-flow">
             <div class="journey-step reveal reveal-up delay-1">
                 <div class="step-icon">01</div>
-                <h4>{% trans "Discovery" %}</h4>
-                <p>{% trans "Consult with our experts to find the exhaustive certification path that matches your career
-                    goals." %}
+                <h4>{% trans "Strategic Consultation" %}</h4>
+                <p>{% trans "Collaborate with our senior advisors to map out an exhaustive certification trajectory
+                    tailored to your industry's specific demands." %}
                 </p>
             </div>
             <div class="journey-step-connector"></div>
             <div class="journey-step reveal reveal-up delay-2">
                 <div class="step-icon">02</div>
-                <h4>{% trans "Immersive Training" %}</h4>
-                <p>{% trans "Engage in world-class training sessions at our Gisozi facility or through our advanced
-                    virtual platform." %}</p>
+                <h4>{% trans "Expert-Led Learning" %}</h4>
+                <p>{% trans "Experience immersive, exhaustive training via our state-of-the-art Gisozi campus or our
+                    premium virtual learning environment." %}</p>
             </div>
             <div class="journey-step-connector"></div>
             <div class="journey-step reveal reveal-up delay-3">
                 <div class="step-icon">03</div>
-                <h4>{% trans "Global Success" %}</h4>
-                <p>{% trans "Complete your PECB exam and join the ranks of internationally recognized professionals." %}
+                <h4>{% trans "Certified Excellence" %}</h4>
+                <p>{% trans "Successfully complete your PECB examinations and join an elite tier of globally recognized
+                    professionals in the Rwandan market." %}
                 </p>
             </div>
         </div>

@@ -1,0 +1,349 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Course Registration | Certilab Talent{% endblock %}
+
+{% block content %}
+<section class="page-header reveal reveal-in">
+    <div class="container reveal reveal-up delay-1">
+        <h1>Certification <span class="accent">Registration</span></h1>
+        <p>Take the first step towards your global professional certification.</p>
+    </div>
+</section>
+
+<section class="section registration-section reveal reveal-up">
+    <div class="container">
+        <div class="registration-container grid-2">
+            <!-- Left Side: Interactive Process Timeline -->
+            <div class="registration-info reveal reveal-left">
+                <div class="timeline-wrapper">
+                    <span class="sub-header">Registration Process</span>
+                    <h3>Your Journey to <span class="text-primary">Excellence</span></h3>
+
+                    <div class="timeline">
+                        <div class="timeline-item active">
+                            <div class="timeline-marker">01</div>
+                            <div class="timeline-content">
+                                <h5>Application Submission</h5>
+                                <p>Fill out the enrollment form with your professional details and selected
+                                    program.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">02</div>
+                            <div class="timeline-content">
+                                <h5>Academic Review</h5>
+                                <p>Our advisors in Gisozi review your background to ensure the program matches
+                                    your goals.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">03</div>
+                            <div class="timeline-content">
+                                <h5>Official Admission</h5>
+                                <p>Receive your admission letter, cohort schedule, and global PECB resources.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="support-sidebar-card glass-card">
+                        <div class="support-icon">💬</div>
+                        <div>
+                            <h5>Need Guidance?</h5>
+                            <p>Our advisors are ready to help you choose the right path.</p>
+                            <a href="https://wa.me/250792899301" class="btn btn-outline btn-sm">Chat with Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Clean Modern Form -->
+            <div class="registration-form-wrapper reveal reveal-right">
+                <div class="form-card-premium">
+                    <div class="form-header">
+                        <h4>Enrollment Application</h4>
+                        <p>Join our next cohort of global professionals.</p>
+                    </div>
+
+                    <form method="post" class="premium-form registration-form">
+                        {% csrf_token %}
+
+                        <div class="form-group-premium">
+                            <label>Full Name</label>
+                            <div class="input-wrapper">
+                                {{ form.full_name }}
+                                <span class="focus-border"></span>
+                            </div>
+                            {% if form.full_name.errors %}
+                            <div class="form-error">{{ form.full_name.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group-premium">
+                                <label>Email Address</label>
+                                <div class="input-wrapper">
+                                    {{ form.email }}
+                                    <span class="focus-border"></span>
+                                </div>
+                                {% if form.email.errors %}
+                                <div class="form-error">{{ form.email.errors }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group-premium">
+                                <label>Phone Number</label>
+                                <div class="input-wrapper">
+                                    {{ form.phone_number }}
+                                    <span class="focus-border"></span>
+                                </div>
+                                {% if form.phone_number.errors %}
+                                <div class="form-error">{{ form.phone_number.errors }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group-premium">
+                                <label>Certification Program</label>
+                                <div class="input-wrapper">
+                                    {{ form.course }}
+                                    <span class="focus-border"></span>
+                                </div>
+                                {% if form.course.errors %}
+                                <div class="form-error">{{ form.course.errors }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group-premium">
+                                <label>Training Format</label>
+                                <div class="input-wrapper">
+                                    {{ form.training_format }}
+                                    <span class="focus-border"></span>
+                                </div>
+                                {% if form.training_format.errors %}
+                                <div class="form-error">{{ form.training_format.errors }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group-premium">
+                            <label>Additional Information (Optional)</label>
+                            <div class="input-wrapper">
+                                {{ form.message }}
+                                <span class="focus-border"></span>
+                            </div>
+                            {% if form.message.errors %}
+                            <div class="form-error">{{ form.message.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <button type="submit" class="btn btn-secondary btn-full btn-glow">
+                            Submit Application &rarr;
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .page-header {
+        background: var(--primary);
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .registration-section {
+        padding: 6rem 0;
+        background: #fcfdfe;
+    }
+
+    .registration-container {
+        align-items: flex-start;
+        gap: 5rem;
+    }
+
+    /* Timeline Styling */
+    .timeline {
+        margin-top: 3rem;
+        position: relative;
+    }
+
+    .timeline-item {
+        display: flex;
+        gap: 1.5rem;
+        position: relative;
+    }
+
+    .timeline-marker {
+        width: 44px;
+        height: 44px;
+        background: #f1f5f9;
+        border: 2px solid #e2e8f0;
+        color: var(--text-light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+        transition: var(--transition);
+    }
+
+    .timeline-item.active .timeline-marker {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 5px rgba(30, 58, 138, 0.1);
+    }
+
+    .timeline-content h5 {
+        margin-bottom: 0.25rem;
+        color: var(--primary);
+        font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.95rem;
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    .timeline-connector {
+        width: 2px;
+        height: 30px;
+        background: #e2e8f0;
+        margin-left: 21px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .support-sidebar-card {
+        margin-top: 4rem;
+        padding: 2rem;
+        display: flex;
+        gap: 1.5rem;
+        background: white;
+        border-radius: 20px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .support-icon {
+        font-size: 2rem;
+    }
+
+    /* Premium Form Styling */
+    .form-card-premium {
+        background: white;
+        padding: 4rem;
+        border-radius: 40px;
+        box-shadow: 0 40px 100px rgba(15, 23, 42, 0.08);
+        border: 1px solid #f1f5f9;
+    }
+
+    .form-header {
+        margin-bottom: 3rem;
+    }
+
+    .form-header h4 {
+        font-size: 1.8rem;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .form-header p {
+        color: var(--text-light);
+    }
+
+    .form-group-premium {
+        margin-bottom: 2rem;
+    }
+
+    .form-group-premium label {
+        display: block;
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--primary);
+        letter-spacing: 0.5px;
+    }
+
+    .input-wrapper {
+        position: relative;
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 1.1rem 1.25rem;
+        border: 2px solid #f1f5f9;
+        border-radius: 16px;
+        background: #f8fafc;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        color: var(--text-main);
+    }
+
+    .focus-border {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: 0.4s;
+    }
+
+    .form-input:focus {
+        background: white;
+        border-color: transparent;
+        outline: none;
+    }
+
+    .form-input:focus~.focus-border {
+        width: 100%;
+        left: 0;
+    }
+
+    .btn-full {
+        width: 100%;
+        padding: 1.25rem;
+        font-size: 1.1rem;
+        border-radius: 16px;
+    }
+
+    .form-error {
+        color: #ef4444;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+        font-weight: 500;
+    }
+
+    @media (max-width: 991px) {
+        .registration-container {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        .form-card-premium {
+            padding: 2.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .form-row {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+        }
+    }
+</style>
+{% endblock %}

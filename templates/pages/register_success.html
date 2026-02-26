@@ -1,0 +1,299 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Registration Successful | Certilab Talent{% endblock %}
+
+{% block content %}
+<section class="section success-section reveal reveal-in">
+    <div class="container">
+        <div class="success-card-premium text-center reveal reveal-up">
+            <div class="confetti-container">
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+            </div>
+
+            <div class="success-icon-wrapper">
+                <div class="success-icon-glow"></div>
+                <div class="success-icon-main">✓</div>
+            </div>
+
+            <h2>Application <span class="text-primary">Submitted!</span></h2>
+            <p class="lead-premium">Your journey towards global certification has officially begun. We've
+                received your enrollment details and our team is already reviewing your application.</p>
+
+            <div class="enrollment-summary">
+                <div class="summary-badge">Official Record: CB-2026-ENROLL</div>
+                <div class="summary-details">
+                    <p>A confirmation email has been sent to your inbox with your application receipt and next
+                        steps.
+                    </p>
+                </div>
+            </div>
+
+            <div class="success-roadmap-flat">
+                <div class="roadmap-step">
+                    <span class="dot"></span>
+                    <p>Review (24h)</p>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-step">
+                    <span class="dot"></span>
+                    <p>Admission</p>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-step">
+                    <span class="dot"></span>
+                    <p>Cohort Start</p>
+                </div>
+            </div>
+
+            <div class="success-actions-premium">
+                <a href="{% url 'pages:home' %}" class="btn btn-primary btn-glow">Return to Dashboard</a>
+                <a href="{% url 'pages:trainings' %}" class="btn btn-outline">View Program Catalog</a>
+            </div>
+
+            <p class="support-text">Questions about your cohort? <a href="https://wa.me/250792899301"
+                    class="wa-link">Chat with an Advisor</a></p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .success-section {
+        padding: 8rem 0;
+        background: #f8fafc;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .success-card-premium {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 5rem 4rem;
+        background: white;
+        border-radius: 40px;
+        box-shadow: 0 40px 100px rgba(15, 23, 42, 0.1);
+        position: relative;
+        z-index: 10;
+        border: 1px solid #f1f5f9;
+        overflow: hidden;
+    }
+
+    .success-icon-wrapper {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 3rem;
+    }
+
+    .success-icon-main {
+        width: 100%;
+        height: 100%;
+        background: #10b981;
+        color: white;
+        font-size: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 15px 35px rgba(16, 185, 129, 0.3);
+    }
+
+    .success-icon-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #10b981;
+        border-radius: 50%;
+        filter: blur(20px);
+        opacity: 0.4;
+        animation: pulse-glow 2s infinite;
+    }
+
+    @keyframes pulse-glow {
+
+        0%,
+        100% {
+            transform: scale(1);
+            opacity: 0.4;
+        }
+
+        50% {
+            transform: scale(1.3);
+            opacity: 0.2;
+        }
+    }
+
+    .success-card-premium h2 {
+        font-size: 2.8rem;
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+    }
+
+    .lead-premium {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        margin-bottom: 3rem;
+        line-height: 1.7;
+    }
+
+    .enrollment-summary {
+        background: #f8fafc;
+        padding: 2rem;
+        border-radius: 24px;
+        margin-bottom: 4rem;
+        border: 1px solid #e2e8f0;
+    }
+
+    .summary-badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: #e2e8f0;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: var(--text-main);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .success-roadmap-flat {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .roadmap-step {
+        text-align: center;
+    }
+
+    .roadmap-step .dot {
+        width: 12px;
+        height: 12px;
+        background: #cbd5e1;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 0.5rem;
+    }
+
+    .roadmap-step:first-child .dot {
+        background: #10b981;
+        box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+    }
+
+    .roadmap-step p {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--text-light);
+    }
+
+    .roadmap-connector {
+        width: 40px;
+        height: 2px;
+        background: #e2e8f0;
+        margin-bottom: 1.5rem;
+    }
+
+    .success-actions-premium {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .wa-link {
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .support-text {
+        font-size: 0.9rem;
+        color: var(--text-light);
+    }
+
+    /* Confetti Micro-animation */
+    .confetti-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: var(--secondary);
+        top: -10px;
+        border-radius: 2px;
+        animation: fall 3s infinite linear;
+    }
+
+    .confetti:nth-child(1) {
+        left: 10%;
+        background: var(--primary-light);
+        animation-delay: 0s;
+    }
+
+    .confetti:nth-child(2) {
+        left: 30%;
+        background: var(--secondary);
+        animation-delay: 1s;
+    }
+
+    .confetti:nth-child(3) {
+        left: 50%;
+        background: var(--accent);
+        animation-delay: 0.5s;
+    }
+
+    .confetti:nth-child(4) {
+        left: 70%;
+        background: var(--primary-light);
+        animation-delay: 1.5s;
+    }
+
+    .confetti:nth-child(5) {
+        left: 90%;
+        background: var(--secondary);
+        animation-delay: 0.2s;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .success-card-premium {
+            padding: 3rem 1.5rem;
+        }
+
+        .success-actions-premium {
+            flex-direction: column;
+        }
+
+        .success-card-premium h2 {
+            font-size: 2.2rem;
+        }
+    }
+</style>
+{% endblock %}

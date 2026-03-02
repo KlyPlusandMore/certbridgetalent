@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # Local Apps
     'pages.apps.PagesConfig',
     'core.apps.CoreConfig',
+    'certibridge_core.apps.CertibridgeCoreConfig',
 ]
 
 MIDDLEWARE = [
